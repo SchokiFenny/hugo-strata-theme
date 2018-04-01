@@ -2,11 +2,14 @@
 <section id="two">
 	{{ with .Site.Params.portfolio.title }}<h2>{{ . | markdownify }}</h2>{{ end }}
 	<div class="row">
-		{{ range .Site.Params.portfolio.gallery }}
+		{{ range first 5 (where .Data.Pages "Type" "post") }}
 		<article class="6u 12u$(xsmall) work-item">
-			<a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb"><img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a>
-			<h3>{{ .title | markdownify }}</h3>
-			<p>{{ .description | markdownify }}</p>
+			<a href="{{ .Permalink }}" class="image fit thumb"><img src="{{ .Params.image }}" alt="" /></a>
+
+      <a href="{{ .Permalink }}" class="nostyle" />
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Description | markdownify }}</p>
+      </a>
 		</article>
 		{{ end }}
 	</div>
