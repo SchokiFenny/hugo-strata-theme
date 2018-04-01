@@ -5,9 +5,12 @@
 <h3>{{ .Key }}</h3>
 <ul>
   {{ range .Pages }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+  <li class="all-posts-by-month">
+    <section>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <p style="padding-left: 30px">{{ .Params.description }}</p>
+    </section>
+
   </li>
   {{ end }}
 </ul>
