@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{ .Content }}
 
-{{ range .Data.Pages.GroupByDate "2006-01" }}
+{{ range .Data.Pages.GroupByDate "March 2018" }}
 <h3>{{ .Key }}</h3>
 <ul>
   {{ range .Pages }}
