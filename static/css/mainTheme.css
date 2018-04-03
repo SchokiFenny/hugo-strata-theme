@@ -61,6 +61,15 @@ ul li.all-posts-by-month a {
 
 /* Containers */
 
+	#laywer-footer {
+		font-size: 0.8em;
+	}
+
+	#datenschutz a {
+		color: green;
+		text-decoration: underline;
+	}
+
 	.container {
 		margin-left: auto;
 		margin-right: auto;

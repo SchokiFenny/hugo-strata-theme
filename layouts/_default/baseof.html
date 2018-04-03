@@ -5,8 +5,16 @@
 		{{ "<!-- Main -->" | safeHTML }}
 		<div id="main">
 			{{ block "main" . }}{{ end }}
+
+			<hr>
+
+			<div id="laywer-footer">
+				<a href="/impressum">Impressum</a> &#8226;
+				<a href="/datenschutz">Datenschutzerklärung</a>
+			</div>
 		</div>
 
 		{{ partial "footer" . }}
+
 	</body>
 </html>
